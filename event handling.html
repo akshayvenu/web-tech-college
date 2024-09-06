@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event handling</title>
+  </head>
+  <body>
+    <button onmousewheel="onDBClick()" id="Trigger">Trigger</button>
+
+    <script>
+      document.getElementById("Trigger").addEventListener("click", myClick);
+
+      function myClick() {
+        alert("single click");
+      }
+
+      function onDBClick() {
+        alert("you scrolled");
+      }
+    </script>
+  </body>
+</html>
+
+
+

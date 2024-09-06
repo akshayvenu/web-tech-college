@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse move</title>
+    <script>
+      function mouseMove(event) {
+        let x = event.clientx;
+        let y = event.clientY;
+        let z = "co-oordinates(x:" + x + " ,y:" + y + ")";
+        document.getElementById("cords").innerHTML = z;
+      }
+
+      function mouseWheel() {
+        document.getElementById("cords").innerHTML = " ";
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        width: 300px;
+        height: 300px;
+        background-color: burlywood;
+        display: flex;
+        justify-content: center;
+      "
+      onmousemove="mouseMove()"
+      onmousewheel="mouseWheel()"
+    ></div>
+    <!-- 
+    <button id="btn" onmousewheel="" onmousemove="mouseMove()"> click Me </button> -->
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javscript basis </title>
+</head>
+
+<script src="script.js"></script>
+
+<script>
+    function openUrl() {
+        window.open("https://myaccount.somaiya.edu/");
+    }
+    function openPromt() {
+        window.prompt("enter email");
+    }
+
+    function openOnTimeOut(){
+        window.setTimeout(()=>{
+            window.open("https://www.google.co.in/")
+        },3000)
+    }
+
+    function openConfirm(){
+        window.setTimeout(()=>{
+            window.confirm("Are you in ? ")
+        },3000)
+    }
+</script>
+
+<body>
+    <button onclick="openUrl()">Kj somaiya Portal</button>
+    <button onclick="openPromt()">Email</button>
+
+    <!-- using setTimeOut -->
+    <button onclick="openOnTimeOut()">open google after 3 sec</button>
+
+    <!-- using the confirm tag  -->
+    <button onclick="openConfirm()">confirm</button>
+</body>
+
+</html>

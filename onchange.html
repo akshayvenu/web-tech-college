@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onchange</title>
+  </head>
+  <script>
+document.addEventListener("mousemove",()=>{
+    document.getElementById("country").style.color="red"
+})
+
+
+    function changed() {
+      document.getElementById("output")
+      document.getElementById("output").innerHTML="Selected option : " + document.getElementById("country").value;
+      
+    }
+  </script>
+  <body>
+    <select name="cc" id="country" onchange="changed()">
+      <option value="australia">Australia</option>
+      <option value="india">India</option>
+      <option value="america">America</option>
+      <option value="germany">Germany</option>
+    </select>
+
+    <p id="output"></p>
+  </body>
+</html>

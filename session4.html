@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javscript events</title>
+<script>
+    // onLoad=()=>{
+    //     alert("onload triggered ... ")
+    // }
+
+    // beforePrint=()=>{
+    //     window.confirm("are you sure you want to print")
+    // }
+
+    // Resize=()=>{
+    //     alert("window resized")
+    // }
+
+    function keyDown() {
+        document.getElementById("ip1").style.color="green";
+    }
+
+
+    function keyUp(){
+        document.getElementById("ip1").style.color="blue";
+    }
+
+    function keyPress(){
+        document.getElementById("ip1").style.backgroundColor="yellow";
+    }
+    function mouseEnter(){
+        document.getElementById("msg").style.backgroundColor="yellow";
+    }
+    function mouseLeave(){
+        document.getElementById("msg").style.backgroundColor="pink";
+    }
+    function mouseOut(){
+        document.getElementById("btn").src="";
+    }
+    function mouseOver(){
+        document.getElementById("btn").src="./open.jpg";
+    }
+
+
+    
+</script>
+</head>
+<body onLoad="onLoad()" onbeforeprint="beforePrint()" onresize="Resize()">
+
+    <input type="text" name="" id="ip1" onkeydown="keyDown()" onkeyup="keyUp()" onkeypress="keyPress()">
+
+    <br>
+
+    <h2>to explore mouse invents take your mouse to below div </h2>
+
+    <div style="height: 300px; width: 300px; background-color: aquamarine; " onmouseenter="mouseEnter()" onmouseleave="mouseLeave()" id="msg">
+
+    </div>
+
+    <img src="./open.jpg" alt="cr7" id="door">
+
+    <button id="btn" onmouseover="mouseOver()" onmouseout="mouseOut()">click me</button>
+
+</body>
+</html>
